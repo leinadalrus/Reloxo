@@ -1,0 +1,5 @@
+<resources>
+    <item name="message_Vary" type="id"/>
+    <item name="alarm_Set" type="id"/>
+    <item name="container_StackFrame" type="id"/>
+</resources>
