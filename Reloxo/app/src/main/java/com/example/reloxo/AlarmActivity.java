@@ -3,6 +3,8 @@ package com.example.reloxo;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.widget.TimePicker;
+
 import android.os.Bundle;
 import android.provider.AlarmClock;
 import android.widget.TextView;
@@ -21,11 +23,14 @@ public class AlarmActivity extends AppCompatActivity {
     int hours, minutes;
     static int alarm_TypeInt;
 
+    private TextView id_Date, id_Time;
     private static TextView onScreen_Alert;
     private EditText userActive_SetName;
 
     public static final String alarm_tag = "AlarmActivity";
     public static final String alarm_frag = "AlarmFragment";
+
+    private TimePicker alarm_ID_TimePicker;
 
     // Initialize Alarm Activity Screen
     public void init_alarm(String msg, int hours, int minutes) {
@@ -39,10 +44,14 @@ public class AlarmActivity extends AppCompatActivity {
         }
     }
 
+    // @Override create all new instances of values when app is re/started
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarm);
+
+        alarm_ID_TimePicker = (TimePicker) (R.id.alarm_ID_TimePicker);
+        // For linking to XML file (activity_alarm.xml)
 
         if (getSupportFragmentManager().findFragmentByTag(alarm_tag) == null) {
             AlarmFragment alarm_frag = new AlarmFragment();
@@ -57,33 +66,33 @@ public class AlarmActivity extends AppCompatActivity {
         button_SetAlarm.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 // TODO Auto-generated method stub
-                Intent button_Press = new Intent();
-                startActivity(button_Press);
-                getUser_SetAlarm();
-                optionSelect();
+                Intent button_Intent = new Intent();
+                startActivity(button_Intent);
+                button_set();
+            }
+        });
+
+        Button button_StopAlarm;
+        button_StopAlarm = findViewById(R.id.button_stop);
+        button_StopAlarm.setOnClickListener(new View.onClickListener() {
+            public void onClick(View view) {
+                Intent button_Intent = new Intent();
+                startActivity(button_Intent);
+                button_stop();
             }
         });
     }
 
-    AlarmFragment.optionSelect optionSelect, sub_OPTS;
-    com.example.reloxo.AlarmFragment.optionSelect optionSelect() {
-        optionSelect = sub_OPTS;
-        return sub_OPTS;
+    AlarmFragment.button_set button_set, button_set_operation;
+    com.example.reloxo.AlarmFragment.button_set button_set() {
+        button_set = button_set_operation;
+        return button_set_operation;
     }
 
-    // Meed to link this to the button-ID from the resources and XML.
-    public EditText getUser_SetAlarm() {
-        userActive_SetName = findViewById(R.id.message_varied);
-        String onName = userActive_SetName.getText().toString();
-        Intent intent_Action = new Intent(this, AlarmActivity.class);
-        intent_Action.putExtra(EXTRA_MESSAGE, onName);
-        startActivity(intent_Action);
-        return userActive_SetName;
-
-    }
-
-    public static TextView get_OnScreenAlert() {
-        return onScreen_Alert;
+    AlarmFragment.button_stop button_stop, button_stop_operation;
+    com.example.reloxo.AlarmFragment.button_stop button_stop() {
+        button_stop = button_stop_operation;
+        return button_stop_operation;
     }
 
 }

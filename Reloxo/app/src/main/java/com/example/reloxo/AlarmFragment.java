@@ -24,13 +24,13 @@ public class AlarmFragment extends Fragment {
         setHasOptionsMenu(true);
     }
 
-    public class optionSelect {
+    public class button_set {
         MenuItem primary_AlarmItem;
         {
 
             if (alarmFragment_AlarmManager == null) {
 
-                if (primary_AlarmItem.getItemId() == R.id.alarm_ID_Set) {
+                if (primary_AlarmItem.getItemId() == R.id.button_set) {
                     alarmIntent.setAction(Intent.ACTION_MAIN);
                     alarmIntent.setFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
 
@@ -44,6 +44,16 @@ public class AlarmFragment extends Fragment {
                     // This is called typecasting and it works as a force typesetter just for this specific assignment
                     // to allow for the use of AlarmManager ready-built functions.
                 } else if (alarmFragment_AlarmManager != null) alarmFragment_AlarmManager.cancel(pendIntent);
+            }
+        }
+    }
+
+    public class button_stop {
+        MenuItem secondary_AlarmItem;
+        {
+            if (alarmFragment_AlarmManager) {
+                if (secondary_AlarmItem.getItemId() == R.id.button_stop)
+                    alarmFragment_AlarmManager.cancel(pendIntent);
             }
         }
     }

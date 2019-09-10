@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Reloxo</string>
-    <string name="button_set">Button Set</string>
+    <string name="button_set">Button in Alarm: Set</string>
+    <string name="button_stop">Button in Alarm: Stopped</string>
 </resources>

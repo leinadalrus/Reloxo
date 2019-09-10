@@ -2,5 +2,10 @@
 <resources>
     <item name="alarm_ID_Set" type="id" />
     <item name="message_varied" type="id" />
-    <item name="button_set_alarm_time" type="id" />
+
+    <item name"button_set" type="id" />
+    <iten name"button_stop" type="id" />
+
+    <item name="alarm_ID_Date" type="id" />
+    <item name="alarm_ID_Time" type="id" />
 </resources>
