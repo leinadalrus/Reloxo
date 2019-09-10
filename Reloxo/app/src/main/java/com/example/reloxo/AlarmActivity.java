@@ -49,7 +49,7 @@ public class AlarmActivity extends AppCompatActivity {
             FragmentTransaction alarmFragment_FragmentTransaction = getSupportFragmentManager().beginTransaction();
             alarmFragment_FragmentTransaction.add(alarm_frag, alarm_tag);
             alarmFragment_FragmentTransaction.commit();
-        } // Creates a new instance of the FragmentManager to allow for the MainFrag class to link to MainActivity and operate.
+        } // Creates a new instance of the FragmentManager to allow for the AlarmFragment class to link to AlarmActivity and operate.
 
         // OnClickListener : Alarm Set Button
         Button button_SetAlarm;
