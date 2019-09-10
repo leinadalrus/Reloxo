@@ -21,8 +21,8 @@ public class AlarmActivity extends AppCompatActivity {
     int hours, minutes;
     static int alarm_TypeInt;
 
-    private static TextView onScreen_Alert, onScreen_Message;
-    EditText userActive_SetName, userActive_SetAlarm;
+    private static TextView onScreen_Alert;
+    private EditText userActive_SetName;
 
     public static final String alarm_tag = "AlarmActivity";
     public static final String alarm_frag = "AlarmFragment";
