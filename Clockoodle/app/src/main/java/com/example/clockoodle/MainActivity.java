@@ -40,10 +40,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.Layout.MainActivity);
 
         if (getSupportFragmentManager().findFragmentByTag(main_tag) == null) {
-            SubFrag subFrag = new SubFrag();
-            FragmentTransaction init_SubFragTransaction = getSupportFragmentManager().beginTransaction();
-            init_SubFragTransaction.add(main_frag, alarm_frag);
-            init_SubFragTransaction.commit();
+            MainFragment main_frag = new MainFragment();
+            FragmentTransaction mainFragment_FragmentTransaction = getSupportFragmentManager().beginTransaction();
+            mainFragment_FragmentTransaction.add(main_tag, main_frag);
+            mainFragment_FragmentTransaction.commit();
         } // Creates a new instance of the FragmentManager to allow for the MainFrag class to link to MainActivity and operate.
 
         // OnClickListener : Alarm Set Button
@@ -59,5 +59,10 @@ public class MainActivity extends AppCompatActivity {
             });
         }
     }
+}
 
+MainFragment.optionSelect optionSelect, main_OPTS;
+com.example.clockoodle.MainFragment.optionSelect optionSelect() {
+    optionSelect = main_OPTS;
+    return main_OPTS;
 }
