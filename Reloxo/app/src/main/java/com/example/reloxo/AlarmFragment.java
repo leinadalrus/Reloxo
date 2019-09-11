@@ -51,10 +51,8 @@ public class AlarmFragment extends Fragment {
     public class button_stop {
         MenuItem secondary_AlarmItem;
         {
-            if (alarmFragment_AlarmManager) {
-                if (secondary_AlarmItem.getItemId() == R.id.button_stop)
-                    alarmFragment_AlarmManager.cancel(pendIntent);
-            }
+            if (secondary_AlarmItem.getItemId() == R.id.button_stop)
+                alarmFragment_AlarmManager.cancel(pendIntent);
         }
     }
 }
