@@ -3,8 +3,6 @@ package com.example.reloxo;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.widget.TimePicker;
-
 import android.os.Bundle;
 import android.provider.AlarmClock;
 import android.widget.TextView;
@@ -30,8 +28,6 @@ public class AlarmActivity extends AppCompatActivity {
     public static final String alarm_tag = "AlarmActivity";
     public static final String alarm_frag = "AlarmFragment";
 
-    private TimePicker alarm_ID_TimePicker;
-
     // Initialize Alarm Activity Screen
     public void init_alarm(String msg, int hours, int minutes) {
         Intent init_alarm_intent = new Intent(AlarmClock.ACTION_SET_ALARM)
@@ -49,9 +45,6 @@ public class AlarmActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarm);
-
-        alarm_ID_TimePicker = (TimePicker) (R.id.alarm_ID_TimePicker);
-        // For linking to XML file (activity_alarm.xml)
 
         if (getSupportFragmentManager().findFragmentByTag(alarm_tag) == null) {
             AlarmFragment alarm_frag = new AlarmFragment();
@@ -74,7 +67,7 @@ public class AlarmActivity extends AppCompatActivity {
 
         Button button_StopAlarm;
         button_StopAlarm = findViewById(R.id.button_stop);
-        button_StopAlarm.setOnClickListener(new View.onClickListener() {
+        button_StopAlarm.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent button_Intent = new Intent();
                 startActivity(button_Intent);
