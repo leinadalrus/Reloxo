@@ -5,4 +5,7 @@
 
     <item name="button_set" type="id" />
     <item name="button_stop" type="id" />
+
+    <item name="button_goto_AlarmActivity" type="id" />
+    <item name="app_name_id" type="id" />
 </resources>

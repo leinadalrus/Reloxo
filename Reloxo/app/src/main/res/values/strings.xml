@@ -2,4 +2,6 @@
     <string name="app_name">Reloxo</string>
     <string name="button_set">Button in Alarm: Set</string>
     <string name="button_stop">Button in Alarm: Stopped</string>
+    <string name="init_alarm">Initilize: Alarm</string
+    <string name="app_name">Reloxo</string>
 </resources>
