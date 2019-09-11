@@ -4,5 +4,5 @@
     <item name="message_varied" type="id" />
 
     <item name="button_set" type="id" />
-    <iten name="button_stop" type="id" />
+    <item name="button_stop" type="id" />
 </resources>
