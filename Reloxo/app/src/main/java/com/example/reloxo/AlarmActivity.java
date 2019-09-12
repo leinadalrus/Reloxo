@@ -1,18 +1,19 @@
 package com.example.reloxo;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
-
-import android.os.Bundle;
 import android.provider.AlarmClock;
 import android.widget.TextView;
 import android.widget.EditText;
 import android.view.View.OnClickListener;
+
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
+
+import android.os.Bundle;
 import android.content.Intent;
 import android.widget.Button;
 import android.view.View;
 
-public class AlarmActivity extends AppCompatActivity {
+public class AlarmActivity extends FragmentActivity {
 
     static int alarm_TypeInt;
 
