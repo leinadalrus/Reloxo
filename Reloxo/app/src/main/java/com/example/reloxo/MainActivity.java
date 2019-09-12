@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import android.content.Intent;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void gotoAlarm(View view) {
         Intent intent = new Intent(this, AlarmActivity.class);
-        Button btns = (Button) findViewById(R.id.button_goto_AlarmActivity);
+        Button btns = findViewById(R.id.button_goto_AlarmActivity);
         String message = btns.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
