@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String EXTRA_MESSAGE= "com.example.reloxo.MESSAGE";
+    public static final String EXTRA_INTENT= "com.example.reloxo.AlarmActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,10 +19,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void gotoAlarm(View view) {
-        Intent intent = new Intent(this, AlarmActivity.class);
-        Button btns = findViewById(R.id.button_goto_AlarmActivity);
-        String message = btns.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
+        Intent intent = new Intent(MainActivity.this, AlarmActivity.class);
+        intent.putExtra(EXTRA_INTENT, 0);
+        MainActivity.this.startActivity(intent);
     }
 }

@@ -47,7 +47,7 @@ public class AlarmActivity extends AppCompatActivity {
         setContentView(R.layout.activity_alarm);
 
         Intent getIntent_From_MainActivity = getIntent();
-        String message_From_MainActivity = getIntent_From_MainActivity.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        String intent_From_MainActivity = getIntent_From_MainActivity.getStringExtra(MainActivity.EXTRA_INTENT);
 
         if (getSupportFragmentManager().findFragmentByTag(alarm_tag) == null) {
             AlarmFragment alarm_frag = new AlarmFragment();
