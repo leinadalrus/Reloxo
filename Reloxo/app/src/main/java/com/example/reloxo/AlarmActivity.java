@@ -12,33 +12,11 @@ import android.content.Intent;
 import android.widget.Button;
 import android.view.View;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
-
 public class AlarmActivity extends AppCompatActivity {
 
-    int hours, minutes;
     static int alarm_TypeInt;
 
-    private TextView id_Date, id_Time;
-    private static TextView onScreen_Alert;
-    private EditText userActive_SetName;
-
     public static final String alarm_tag = "AlarmActivity";
-    public static final String alarm_frag = "AlarmFragment";
-
-    // Initialize Alarm Activity Screen
-    public void init_alarm(String msg, int hours, int minutes) {
-        Intent init_alarm_intent = new Intent(AlarmClock.ACTION_SET_ALARM)
-                .putExtra(AlarmClock.EXTRA_MESSAGE, msg)
-                .putExtra(AlarmClock.EXTRA_HOUR, hours)
-                .putExtra(AlarmClock.EXTRA_MINUTES, minutes);
-
-        if (init_alarm_intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(init_alarm_intent);
-        }
-    }
 
     // @Override create all new instances of values when app is re/started
     @Override
