@@ -31,8 +31,6 @@ public class AlarmFragment extends Fragment {
             if (alarmFragment_AlarmManager == null) {
 
                 if (primary_AlarmItem.getItemId() == R.id.button_set) {
-                    alarmIntent.setAction(Intent.ACTION_MAIN);
-                    alarmIntent.setFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
 
                     AlarmActivity.alarm_TypeInt = AlarmManager.ELAPSED_REALTIME_WAKEUP;
                     int ms_SecondDelay = 30000;
