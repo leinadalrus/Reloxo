@@ -2,6 +2,7 @@ package com.example.reloxo;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
+import android.os.Message;
 import android.os.SystemClock;
 import android.os.Handler;
 
@@ -35,6 +36,7 @@ public class AlarmFragment extends Fragment {
 
     public class button_set {
         MenuItem primary_AlarmItem;
+        Handler handler;
         {
 
             if (alarmFragment_AlarmManager == null) {
@@ -50,6 +52,17 @@ public class AlarmFragment extends Fragment {
                     // You may notice that tha AlarmManager typename is in brackets after an assignment operator.
                     // This is called typecasting and it works as a force typesetter just for this specific assignment
                     // to allow for the use of AlarmManager ready-built functions.
+
+                    for (int i = 0; i < 20; i++) {
+                        this.handler.post(new Thread() {
+                            void msgRunner(Message msg) {
+                                if (msg.what == 0) {
+                                    Bundle b = msg.getData();
+                                }
+                            }
+                        });
+                    }   // Thread Message Handler, loops under 20 times, updating received data,
+                        // while setting alarm.
                 } else if (alarmFragment_AlarmManager != null) alarmFragment_AlarmManager.cancel(pendIntent);
             }
         }

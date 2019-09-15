@@ -45,18 +45,6 @@ public class AlarmActivity extends FragmentActivity {
             alarmFragment_FragmentTransaction.commit();
         } // Creates a new instance of the FragmentManager to allow for the AlarmFragment class to link to AlarmActivity and operate.
 
-        for (int i = 0; i < 20; i++) {
-            this.handler.post(new Thread() {
-                void msgRunner(Message msg) {
-                    if (msg.what == 0) {
-                        Bundle b = msg.getData();
-                        button_set();
-                    }
-                }
-            });
-        }   // Thread Message Handler, loops under 20 times, updating received data,
-            // while setting alarm.
-
         // OnClickListener : Alarm Set Button
         Button button_SetAlarm;
         button_SetAlarm = findViewById(R.id.button_set);
