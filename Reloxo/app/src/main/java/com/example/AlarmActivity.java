@@ -53,7 +53,7 @@ public class AlarmActivity extends FragmentActivity {
                 // TODO Auto-generated method stub
                 Intent button_Intent = new Intent();
                 startActivity(button_Intent);
-                button_set();
+                buttonSet();
             }
         });
 
@@ -63,21 +63,21 @@ public class AlarmActivity extends FragmentActivity {
             public void onClick(View view) {
                 Intent button_Intent = new Intent();
                 startActivity(button_Intent);
-                button_stop();
+                buttonStop();
             }
         });
     }
 
-    AlarmFragment.button_set button_set, button_set_operation;
-    com.example.reloxo.AlarmFragment.button_set button_set() {
-        button_set = button_set_operation;
-        return button_set_operation;
+    AlarmFragment.buttonSet buttonSet, buttonSet_Operation;
+    com.example.reloxo.AlarmFragment.buttonSet buttonSet() {
+        buttonSet = buttonSet_Operation;
+        return buttonSet_Operation;
     }
 
-    AlarmFragment.button_stop button_stop, button_stop_operation;
-    com.example.reloxo.AlarmFragment.button_stop button_stop() {
-        button_stop = button_stop_operation;
-        return button_stop_operation;
+    AlarmFragment.buttonStop buttonStop, buttonStop_Operation;
+    com.example.reloxo.AlarmFragment.buttonStop buttonStop() {
+        buttonStop = buttonStop_Operation;
+        return buttonStop_Operation;
     }
 
 }
