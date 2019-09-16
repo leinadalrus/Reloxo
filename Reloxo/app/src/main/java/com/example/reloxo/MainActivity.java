@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String EXTRA_INTENT= "com.example.reloxo.AlarmActivity";
+    public static final String EXTRA_INTENT= "com.example.reloxo.MainActivity.EXTRA_INTENT";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
