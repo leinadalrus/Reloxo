@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="alarm_ID_Set" type="id" />
+    <item name="message_varied" type="id" />
+
+    <item name="button_set" type="id" />
+    <item name="button_stop" type="id" />
+
+    <item name="button_goto_AlarmActivity" type="id" />
+    <item name="app_name_id" type="id" />
+</resources>
