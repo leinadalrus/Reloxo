@@ -13,11 +13,22 @@ import android.content.Intent;
 import android.widget.Button;
 import android.view.View;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.os.Message;
+import android.os.Handler;
+
 public class AlarmActivity extends FragmentActivity {
 
     static int alarm_TypeInt;
 
     public static final String alarm_tag = "AlarmActivity";
+    public final String EXTRA_INTENT = "com.example.reloxo.AlarmActivity.EXTRA_INTENT";
+    public final String EXTRA_FRAGMENT = "com.example.reloxo.AlarmActivity.EXTRA_FRAGMENT";
+
+    AlarmFragment alarmfragment;
+
+    Handler handler; // Handler variable for thread messaging.
 
     // @Override create all new instances of values when app is re/started
     @Override
@@ -25,15 +36,17 @@ public class AlarmActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarm);
 
-        Intent getIntent_From_MainActivity = getIntent();
-        String intent_From_MainActivity = getIntent_From_MainActivity.getStringExtra(MainActivity.EXTRA_INTENT);
+        alarmfragment = new AlarmFragment();
 
-        if (getSupportFragmentManager().findFragmentByTag(alarm_tag) == null) {
-            AlarmFragment alarm_frag = new AlarmFragment();
-            FragmentTransaction alarmFragment_FragmentTransaction = getSupportFragmentManager().beginTransaction();
-            alarmFragment_FragmentTransaction.add(alarm_frag, alarm_tag);
-            alarmFragment_FragmentTransaction.commit();
-        } // Creates a new instance of the FragmentManager to allow for the AlarmFragment class to link to AlarmActivity and operate.
+        Intent intent = new Intent(this, AlarmFragment.class);
+        intent.putExtra(EXTRA_INTENT, 0);
+        PendingIntent pend = PendingIntent.getActivity(this, 6576658277, intent,
+            PendingIntent.FLAG_CANCEL_CURRENT); /*
+            6576658277 is the requestcode, and is 'ALARM' in Decimal.
+            If we have an existing PendingIntent
+            - cancel it, and launch new data; */
+            // FLAG_UPDATE_CURRENT will just update the current PendingIntent.
+        this.startActivity(intent);
 
         // OnClickListener : Alarm Set Button
         Button button_SetAlarm;
@@ -43,7 +56,7 @@ public class AlarmActivity extends FragmentActivity {
                 // TODO Auto-generated method stub
                 Intent button_Intent = new Intent();
                 startActivity(button_Intent);
-                button_set();
+                buttonSet();
             }
         });
 
@@ -53,21 +66,21 @@ public class AlarmActivity extends FragmentActivity {
             public void onClick(View view) {
                 Intent button_Intent = new Intent();
                 startActivity(button_Intent);
-                button_stop();
+                buttonStop();
             }
         });
     }
 
-    AlarmFragment.button_set button_set, button_set_operation;
-    com.example.reloxo.AlarmFragment.button_set button_set() {
-        button_set = button_set_operation;
-        return button_set_operation;
+    AlarmFragment.buttonSet buttonSet, buttonSet_Operation;
+    com.example.reloxo.AlarmFragment.buttonSet buttonSet() {
+        buttonSet = buttonSet_Operation;
+        return buttonSet_Operation;
     }
 
-    AlarmFragment.button_stop button_stop, button_stop_operation;
-    com.example.reloxo.AlarmFragment.button_stop button_stop() {
-        button_stop = button_stop_operation;
-        return button_stop_operation;
+    AlarmFragment.buttonStop buttonStop, buttonStop_Operation;
+    com.example.reloxo.AlarmFragment.buttonStop buttonStop() {
+        buttonStop = buttonStop_Operation;
+        return buttonStop_Operation;
     }
 
 }
