@@ -40,9 +40,9 @@ public class AlarmActivity extends FragmentActivity {
 
         Intent intent = new Intent(this, AlarmFragment.class);
         intent.putExtra(EXTRA_INTENT, 0);
-        PendingIntent pend = PendingIntent.getActivity(this, 6576658277, intent,
+        PendingIntent pend = PendingIntent.getActivity(this, 6565, intent,
             PendingIntent.FLAG_CANCEL_CURRENT); /*
-            6576658277 is the requestcode, and is 'ALARM' in Decimal.
+            6565 is the requestcode, and is 'AA' (for AlarmActivity) in Decimal.
             If we have an existing PendingIntent
             - cancel it, and launch new data; */
             // FLAG_UPDATE_CURRENT will just update the current PendingIntent.

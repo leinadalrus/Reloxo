@@ -16,8 +16,8 @@ import androidx.fragment.app.Fragment;
 
 public class AlarmFragment extends Fragment {
     AlarmManager alarmFragment_AlarmManager;
-    Intent alarmIntent = new Intent(this, AlarmActivity.class);
-    PendingIntent pendIntent = PendingIntent.getActivity(this, 6576658277, alarmIntent, 
+    Intent alarmIntent = new Intent(this.getActivity(), AlarmActivity.class);
+    PendingIntent pendIntent = PendingIntent.getActivity(this.getActivity(), 6565, alarmIntent,
                                                             PendingIntent.FLAG_UPDATE_CURRENT);
             // PendingIntent allow outsider/foreign apps to have access to the OS's public code.
         // getActivity() can be replaced by getActivities() if you have an array of Intents:
