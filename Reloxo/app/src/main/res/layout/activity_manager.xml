@@ -42,11 +42,12 @@
         android:id="@+id/imgbutton_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:alpha="255"
         android:backgroundTint="#00FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_add"
-        tools:layout_editor_absoluteX="374dp"
-        tools:layout_editor_absoluteY="18dp" />
+        tools:layout_editor_absoluteX="323dp" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
@@ -62,21 +63,12 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:text="World Clock"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@android:color/white"
-        tools:layout_editor_absoluteX="63dp"
-        tools:layout_editor_absoluteY="705dp" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Timer"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@android:color/white"
-        tools:layout_editor_absoluteX="213dp"
-        tools:layout_editor_absoluteY="705dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="41dp" />
 
     <TextView
         android:id="@+id/textView7"
@@ -85,11 +77,21 @@
         android:text="Stopwatch"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@android:color/white"
-        tools:layout_editor_absoluteX="310dp"
-        tools:layout_editor_absoluteY="705dp" />
+        tools:layout_editor_absoluteX="288dp"
+        tools:layout_editor_absoluteY="691dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Timer"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white"
+        tools:layout_editor_absoluteX="191dp"
+        tools:layout_editor_absoluteY="691dp" />
 
     <LinearLayout
-        android:layout_width="469dp"
+        android:layout_width="wrap_content"
         android:layout_height="611dp"
         android:layout_marginTop="1dp"
         android:layout_marginBottom="1dp"
@@ -129,7 +131,7 @@
 
                 <Switch
                     android:id="@+id/switch1"
-                    android:layout_width="174dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:showText="true"
                     android:splitTrack="true"
@@ -168,7 +170,7 @@
 
                 <Switch
                     android:id="@+id/switch2"
-                    android:layout_width="174dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:showText="true"
                     android:splitTrack="true"
@@ -207,7 +209,7 @@
 
                 <Switch
                     android:id="@+id/switch3"
-                    android:layout_width="174dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:showText="true"
                     android:splitTrack="true"
@@ -246,7 +248,7 @@
 
                 <Switch
                     android:id="@+id/switch4"
-                    android:layout_width="174dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:showText="true"
                     android:splitTrack="true"
@@ -285,7 +287,7 @@
 
                 <Switch
                     android:id="@+id/switch5"
-                    android:layout_width="174dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:showText="true"
                     android:splitTrack="true"
